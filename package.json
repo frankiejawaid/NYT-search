@@ -1,0 +1,38 @@
+{
+  "name": "nyt-search",
+  "version": "1.0.0",
+  "description": "eact application using nyt api",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "build-bundle": "^2.0.8",
+    "express": "^4.15.3",
+    "js": "^0.1.0",
+    "mongo": "^0.1.0",
+    "mongojs": "^2.4.0",
+    "morgan": "^1.8.2",
+    "package": "^1.0.1",
+    "react": "^15.6.1",
+    "react-router": "^4.1.2"
+  },
+  "devDependencies": {
+    "webpack": "^3.4.1"
+  },
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankiejawaid/NYT-search.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Frankie J",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankiejawaid/NYT-search/issues"
+  },
+  "homepage": "https://github.com/frankiejawaid/NYT-search#readme"
+}
