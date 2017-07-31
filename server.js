@@ -2,7 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
-var mongojs = require('mongojs');
+var mongoose = require('mongoose');
 
 // Create Instance of Express
 var app = express();
@@ -24,7 +24,9 @@ var databaseUrl = 'nytreact';
 var collections = ["nytreact"];
 
 // Use mongojs to hook the database to the db variable. 
-var db = mongojs(databaseUrl, collections);
+mongoose.promise = Promise;
+mongoose.connect('mongodb://localhost/nytreact')
+var db = mongoose.connection;
 
 db.on('error', function (err) {
   console.log('MongoDB Error: ', err);
@@ -34,7 +36,7 @@ db.on('error', function (err) {
 // Main Route which redirect to our rendered React app.
 app.get('/', function(req, res){
 	console.log("Loading the Index page.");
-  res.sendFile('./public/index.html');
+  res.sendFile('index.html');
 });
 
 // ============================================================
