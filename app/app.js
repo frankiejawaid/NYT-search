@@ -3,12 +3,8 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 // Main Component
-var main = require('./Components/main')
+var Main = require('./components/main')
 
-console.log("upload main content.");
+console.log(Main);
 // Render our main component 
-ReactDOM.render(
-	<main />,
-	document.getElementById('app')
-)
-console.log("Attempting to finish loading main content.");
+ReactDOM.render(<Main />, document.getElementById('app'))
